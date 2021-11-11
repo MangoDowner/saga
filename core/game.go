@@ -24,6 +24,7 @@ func NewGame() *Game {
 	g.WorldTags = tags
 	g.World = world
 	g.Turn = PlayerTurn
+
 	g.TurnCounter = 0
 	return g
 
@@ -32,7 +33,7 @@ func NewGame() *Game {
 //Update is called each tic.
 func (g *Game) Update() error {
 	g.TurnCounter++
-	if g.Turn == PlayerTurn && g.TurnCounter > 20 {
+	if g.Turn == PlayerTurn && g.TurnCounter > 5 {
 		TakePlayerAction(g)
 	}
 	if g.Turn == MonsterTurn {
