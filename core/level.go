@@ -1,11 +1,10 @@
-package main
+package core
 
 import (
-	"log"
-
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
 	"github.com/norendren/go-fov/fov"
+	"log"
 )
 
 type TileType int

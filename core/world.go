@@ -1,10 +1,9 @@
-package main
+package core
 
 import (
-	"log"
-
 	"github.com/bytearena/ecs"
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
+	"log"
 )
 
 var position *ecs.Component

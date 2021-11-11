@@ -1,8 +1,7 @@
-package main
+package core
 
 import (
 	"fmt"
-
 	"github.com/bytearena/ecs"
 )
 

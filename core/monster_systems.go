@@ -1,4 +1,4 @@
-package main
+package core
 
 import (
 	"github.com/norendren/go-fov/fov"

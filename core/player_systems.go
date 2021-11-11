@@ -1,6 +1,8 @@
-package main
+package core
 
-import "github.com/hajimehoshi/ebiten/v2"
+import (
+	"github.com/hajimehoshi/ebiten/v2"
+)
 
 func TakePlayerAction(g *Game) {
 	players := g.WorldTags["players"]

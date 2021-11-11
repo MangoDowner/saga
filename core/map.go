@@ -1,4 +1,4 @@
-package main
+package core
 
 //GameMap holds all the level and aggregate information for the entire world.
 type GameMap struct {
