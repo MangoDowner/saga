@@ -2,7 +2,6 @@ package core
 
 import (
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
 	"github.com/norendren/go-fov/fov"
 	"log"
 )
@@ -52,12 +51,9 @@ func loadTileImages() {
 	}
 	var err error
 
-	floor, _, err = ebitenutil.NewImageFromFile("assets/floor.png")
-	if err != nil {
-		log.Fatal(err)
-	}
+	floor = NewTileSet().Image("floor")
+	wall = NewTileSet().Image("wall")
 
-	wall, _, err = ebitenutil.NewImageFromFile("assets/wall.png")
 	if err != nil {
 		log.Fatal(err)
 	}

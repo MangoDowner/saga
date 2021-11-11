@@ -2,8 +2,6 @@ package core
 
 import (
 	"github.com/bytearena/ecs"
-	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
-	"log"
 )
 
 var position *ecs.Component
@@ -28,14 +26,9 @@ func InitializeWorld(startingLevel Level) (*ecs.Manager, map[string]ecs.Tag) {
 	armor = manager.NewComponent()
 	name = manager.NewComponent()
 
-	playerImg, _, err := ebitenutil.NewImageFromFile("assets/player.png")
-	if err != nil {
-		log.Fatal(err)
-	}
-	skellyImg, _, err := ebitenutil.NewImageFromFile("assets/skelly.png")
-	if err != nil {
-		log.Fatal(err)
-	}
+
+	playerImg := NewTileSet().Image("player")
+	skellyImg := NewTileSet().Image("monster")
 
 	//Get First Room
 	startingRoom := startingLevel.Rooms[0]
